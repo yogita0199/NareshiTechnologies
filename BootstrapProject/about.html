@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Naresh Technologies</title>
+       <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+       <link rel="stylesheet" href="../fonts/css/all.css">
+    </head>
+    <body class="container-fluid">
+        <h2 align="center" class="p-5 btn-danger">Naresh Institute And Technologies</h2>
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg border rounded">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuitems">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav navbar-collapse collapse ms-5" id="menuitems">
+                <li class="nav-item me-3"><a href="home.html" class="nav-link"><span class="fa fa-home"></span> Home</a></li>
+                <li class="nav-item me-3"><a href="about.html" class="nav-link"><span class="far fa-address-card"></span> About</a>
+                </li>
+                <li class="nav-item me-3"><a href="service.html" class="nav-link"><span class="fab fa-servicestack"></span> Service</a>
+                </li>
+                <li class="nav-item me-3"><a href="contactus.html" class="nav-link"><span class="fas fa-phone-alt"></span> Contact Us</a>
+                </li>
+            </ul>
+            <div class="dropdown me-5">
+                <button class="btn btn-dark dropdown-toggle me-4" data-bs-toggle="dropdown">
+                    <span class="fas fa-sign-in-alt"></span> Sign In
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#SignIn" data-bs-toggle="modal" class="dropdown-item">
+                            <span class="fas fa-sign-in-alt"></span> Sign In</a></li>
+                    <li><a href="#SignUp" data-bs-toggle="modal" class="dropdown-item"><span
+                                class="fas fa-user-plus"></span> Sign Up</a></li>
+                    <li><a href="#change" data-bs-toggle="modal" class="dropdown-item"><span
+                                class="fas fa-unlock-alt"></span> Change Password</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Sign In modal -->
+        <div class="modal position-relative top-25" id="SignIn">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Please Login Your Account</h2>
+                        <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <label class="form-label">Email-id:</label>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text fa fa-user bg-success text-white"></span>
+                            <input type="text" placeholder="Email Id" class="form-control text-center">
+                            <span class="input-group-text bg-success text-white">@gmail.com</span>
+                        </div><br>
+                        <div>
+                            <label class="form-label">Password:</label>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text fas fa-unlock-alt bg-success text-white"></span>
+                            <input type="text" placeholder="Password" class="form-control text-center">
+                            <span class="input-group-text bg-success text-white">*****</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-warning text-white"><span class="fas fa-sign-in-alt"></span> Sign In</button>
+                        <button class="btn btn-danger text-white" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign Up modal -->
+        <div class="modal" id="SignUp">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header btn-danger">
+                        <h2>Registration Form</h2>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-1">
+                            <label class="form-label">Full Name:</label>
+                            <div>
+                                <input type="text" placeholder="Full Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label">Email:</label>
+                            <div>
+                                <input type="text" placeholder="Email-id" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label">Mobile:</label>
+                            <div>
+                                <input type="text" placeholder="Contact Number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label">Birth Date:</label>
+                            <div>
+                                <input type="date" placeholder="Birth Date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label">Image:</label>
+                            <div>
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label">Password:</label>
+                            <div>
+                                <input type="text" placeholder="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label">Confirm Password:</label>
+                            <div>
+                                <input type="text" placeholder="Confirm Password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label">Gender</label>
+                            <div>
+                                <input type="radio" name="gender" class="form-check-input">
+                                <label class="form-check-label"> Male</label>
+                                <input type="radio" name="gender" class="form-check-input">
+                                <label class="form-check-label"> Female</label>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">I've read and Accept the <span class="text-danger">Terms And
+                                    Conditions</span></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-warning text-white">Already you have an account</button>
+                        <a href="#" class=" btn btn-success">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Change Password modal -->
+        <div class="modal position-relative top-25" id="change">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-warning">
+                        <h2 class="ms-5">Registration Form</h2>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <span class="input-group-text fa fa-star btn-danger"></span>
+                            <input type="password" placeholder="Current password" class="form-control">
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text fa fa-star btn-danger"></span>
+                            <input type="password" placeholder="New password" class="form-control">
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text fa fa-star btn-danger"></span>
+                            <input type="password" placeholder="Confirm password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-success">Change password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="border border-dark">
+            <div>
+              <h3 class="bg-primary text-center pb-2">Details</h3>
+            </div>
+            <div class="table table-responsive table-bordered d-flex w-100 mt-3 ms-1">
+                <table class="table table-hover text-center me-2">
+                   <thead class="bg-secondary text-white">
+                       <tr>
+                           <th>Id</th>
+                           <th>Course Name</th>
+                           <th>Faculty Name</th>
+                           <th>Duration</th>
+                           <th>Timings</th>
+                           <th>view</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Angular 8</td>
+                        <td>Sudhakar sharma sir</td>
+                        <td>45 days</td>
+                        <td>07:30 AM</td>
+                        <td><button class="btn btn-sm btn-warning text-white">view <span class="fa fa-eye"></span></button></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Node Js</td>
+                        <td>Samba sir</td>
+                        <td>45 days</td>
+                        <td>9:00 AM</td>
+                        <td><button class="btn btn-sm btn-warning text-white">view <span class="fa fa-eye"></span></button></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Java</td>
+                        <td>Hari krishna sir</td>
+                        <td>60 days</td>
+                        <td>4:30 PM</td>
+                        <td><button class="btn btn-sm btn-warning text-white">view <span class="fa fa-eye"></span></button></td>
+                      </tr>
+                   </tbody>
+                </table>
+            </div>
+         </div>
+        <footer>
+            <div class="row bg-dark text-white mt-5">
+                <h5 class="text-center p-3">Naresh Technologies</h5>
+               <div class="col m-5">
+                  <ul>
+                      <li><span class="fab fa-facebook"> Facebook</span></li>
+                      <li><span class="fab fa-google"> Google</span></li>
+                      <li><span class="fab fa-twitter"> Twitter</span></li>
+                      <li><span class="fab fa-youtube"> Youtube</span></li>
+                  </ul>
+               </div>
+               <div class="col m-5">
+                   <ul>
+                       <li><span class="fa fa-home"> Home</span></li>
+                       <li><span class="far fa-address-card"> About</span></li>
+                       <li><span class="fab fa-servicestack"> Service</span></li>
+                       <li><span class="fas fa-phone-alt"> Contact</span></li>
+                   </ul>
+               </div>
+               <div class="col m-5">
+                    <ul>
+                        <li>Name : Naresh Istitute</li>
+                        <li>Email : info@nareshit.com</li>
+                        <li>Contact : +91-xxxxxxxxxx</li>
+                        <li>Address : Sr nagar, Hyderabad, Telangana, India</li>
+                    </ul>
+               </div>
+            </div>
+        </footer>
+        <script src=" ../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

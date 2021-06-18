@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../fonts/css/all.css">
+    <style>
+        footer ul li{
+            list-style: none;
+        }
+        .box{
+            box-shadow:6px 10px 2px gray;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <h2 align="center" class="p-5 btn-danger">Naresh Institute And Technologies</h2>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg border rounded">
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuitems">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse ms-5" id="menuitems">
+            <li class="nav-item me-3"><a href="home.html" class="nav-link"><span class="fa fa-home"></span> Home</a></li>
+            <li class="nav-item me-3"><a href="about.html" class="nav-link"><span class="far fa-address-card"></span> About</a>
+            </li>
+            <li class="nav-item me-3"><a href="service.html" class="nav-link"><span class="fab fa-servicestack"></span> Service</a>
+            </li>
+            <li class="nav-item me-3"><a href="contactus.html" class="nav-link"><span class="fas fa-phone-alt"></span> Contact Us</a>
+            </li>
+        </ul>
+        <div class="dropdown me-5">
+            <button class="btn btn-dark dropdown-toggle me-4" data-bs-toggle="dropdown">
+                <span class="fas fa-sign-in-alt"></span> Sign In
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#SignIn" data-bs-toggle="modal" class="dropdown-item">
+                        <span class="fas fa-sign-in-alt"></span> Sign In</a></li>
+                <li><a href="#SignUp" data-bs-toggle="modal" class="dropdown-item"><span
+                            class="fas fa-user-plus"></span> Sign Up</a></li>
+                <li><a href="#change" data-bs-toggle="modal" class="dropdown-item"><span
+                            class="fas fa-unlock-alt"></span> Change Password</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Sign In modal -->
+    <div class="modal position-relative top-25" id="SignIn">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Please Login Your Account</h2>
+                    <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label class="form-label">Email-id:</label>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text fa fa-user bg-success text-white"></span>
+                        <input type="text" placeholder="Email Id" class="form-control text-center">
+                        <span class="input-group-text bg-success text-white">@gmail.com</span>
+                    </div><br>
+                    <div>
+                        <label class="form-label">Password:</label>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text fas fa-unlock-alt bg-success text-white"></span>
+                        <input type="text" placeholder="Password" class="form-control text-center">
+                        <span class="input-group-text bg-success text-white">*****</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning text-white"><span class="fas fa-sign-in-alt"></span> Sign In</button>
+                    <button class="btn btn-danger text-white" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up modal -->
+    <div class="modal" id="SignUp">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header btn-danger">
+                    <h2>Registration Form</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-1">
+                        <label class="form-label">Full Name:</label>
+                        <div>
+                            <input type="text" placeholder="Full Name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label">Email:</label>
+                        <div>
+                            <input type="text" placeholder="Email-id" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label">Mobile:</label>
+                        <div>
+                            <input type="text" placeholder="Contact Number" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label">Birth Date:</label>
+                        <div>
+                            <input type="date" placeholder="Birth Date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label">Image:</label>
+                        <div>
+                            <input type="file" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label">Password:</label>
+                        <div>
+                            <input type="text" placeholder="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label">Confirm Password:</label>
+                        <div>
+                            <input type="text" placeholder="Confirm Password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label">Gender</label>
+                        <div>
+                            <input type="radio" name="gender" class="form-check-input">
+                            <label class="form-check-label"> Male</label>
+                            <input type="radio" name="gender" class="form-check-input">
+                            <label class="form-check-label"> Female</label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">I've read and Accept the <span class="text-danger">Terms And
+                                Conditions</span></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning text-white">Already you have an account</button>
+                    <a href="#" class=" btn btn-success">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Change Password modal -->
+    <div class="modal position-relative top-25" id="change">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h2 class="ms-5">Registration Form</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-text fa fa-star btn-danger"></span>
+                        <input type="password" placeholder="Current password" class="form-control">
+                    </div>
+                    <div class="input-group mt-3">
+                        <span class="input-group-text fa fa-star btn-danger"></span>
+                        <input type="password" placeholder="New password" class="form-control">
+                    </div>
+                    <div class="input-group mt-3">
+                        <span class="input-group-text fa fa-star btn-danger"></span>
+                        <input type="password" placeholder="Confirm password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success">Change password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel -->
+    <div id="topbanner" class="carousel carousel-dark-slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="Images/a1.jpg" class="w-100 d-block" height="400">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="Images/a2.jpg" class="w-100 d-block" height="400">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="Images/a3.jpg" class="w-100 d-block" height="400">
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-target="#topbanner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#topbanner" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button class="active bg-dark border rounded-pill" data-bs-target="#topbanner"
+                data-bs-slide-to="0"></button>
+            <button class="bg-dark border rounded-pill" data-bs-target="#topbanner" data-bs-slide-to="1"></button>
+            <button class="bg-dark border rounded-pill" data-bs-target="#topbanner" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+    <div>
+        <div class="justify-content-center align-items-center d-flex">
+            <button class="btn mt-4 text-white bg-warning">Show me what's in this package</button>
+        </div>
+        <div class="justify-content-center align-items-center d-flex">
+            <button class="btn mt-3 text-white btn-primary">What is the package</button>
+        </div>
+        <div class="justify-content-center align-items-center d-flex">
+            <p class="w-50">* A package is a small container in which a quantity of something is sold. Packages are
+                either small
+                boxes made of thin cardboard, or bags or envelopes made of paper or plastic. ... When a product is
+                packaged, it is put into containers to be sold.</p>
+        </div>
+    </div>
+    <div class="table-responsive table-bordered d-flex">
+        <table class="table table-hover m-5 h-25 w-50 text-center border-dark">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>Department</th>
+                    <th>Included</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>M.Tech</td>
+                    <td><span class="fas fa-check text-success"></span></td>
+                </tr>
+                <tr>
+                    <td>B.Tech</td>
+                    <td><span class="fas fa-check text-success"></span></td>
+                </tr>
+                <tr>
+                    <td>MCA</td>
+                    <td><span class="fas fa-check text-success"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <img src="Images/a2.jpg" class="m-5 border" height="200px" width="300px">
+    </div>
+    <div class="row mt-5 bg-secondary p-4">
+        <h3 class="text-center">What is the job</h3>
+        <div class="col mt-3">
+            <h1 class="ms-5"><span class="far fa-keyboard"></span></h1>
+            <p class="fs-4">Types of jobs </p>
+            <ul>
+                <li>volcanologist..</li>
+                <li>Quantum physicist...</li>
+                <li>Oceanographer...</li>
+                <li>Biomedical engineer..</li>
+            </ul>
+        </div>
+        <div class="col mt-3">
+            <h1 class="ms-5"><span class="far fa-file-word"></span></h1>
+            <p class="fs-4">Define job profile</p>
+            <p>Job profile developed by the personnel department of a business might include such things as job
+                responsibilities, required qualifications, advancement prospects.</p>
+        </div>
+        <div class="col mt-3">
+            <h1 class="ms-5"><span class="fab fa-wordpress-simple"></span></h1>
+            <p class="fs-4">Job profile summary</p>
+            <p>Profile summary is a summary of your education, skills, career experiences, and goals.</p>
+        </div>
+        <div class="col mt-3">
+            <h1 class="ms-5"><span class="fas fa-laptop"></span></h1>
+            <p class="fs-4">The IT skills</p>
+            <ul>
+                <li>Coding.</li>
+                <li>Communication.</li>
+                <li>Networks.</li>
+                <li>Time Management.</li>
+                <li>More Information Technology Skills.</li>
+            </ul>
+        </div>
+        <div class="col mt-3">
+            <h1 class="ms-5"><span class="fas fa-laptop-code"></span></h1>
+            <p class="fs-4">Freshers key skills</p>
+            <ul>
+                <li>Communication.</li>
+                <li>Ability to Work Under Pressure.</li>
+                <li>Decision Making.</li>
+                <li>Time Management.</li>
+                <li>Self-motivation.</li>
+                <li>Conflict Resolution.</li>
+                <li>personal skills?</li>
+                <li>Leadership.</li>
+                <li>Adaptability.</li>
+            </ul>
+        </div>
+        <div class="col mt-3">
+            <h1 class="ms-5"><span class="fas fa-desktop"></span></h1>
+            <p class="fs-4">Personal skills</p>
+            <p>A skill is the ability to do something well, a certain competence or proficiency. Skills are typically
+                acquired or developed through direct experiences and training, and they can require sustained effort.
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="d-flex mt-4">
+            <div class="ms-5">
+                <p><span style="font-size:555%;" class="text-warning">&#9312;</span>Why do you want this job?</p>
+                <p>The hiring manager wants to: Learn about your career goals and how this position fits into your
+                    plan.
+                    Make sure that you are sincerely interested in the job and will be motivated to perform if hired.
+                    Find
+                    out what you know about the company, industry, position (and if you took the time to research).</p>
+            </div>
+            <div>
+                <hr>
+                <img class="m-5" src="Images/job1.jpg" height="200" width="300">
+            </div>
+        </div>
+        <div class="d-flex mt-4">
+            <div>
+                <hr>
+                <img class="m-5" src="Images/job2.png" height="200" width="300">
+            </div>
+            <div class="ms-5">
+                <p><span style="font-size:555%;" class="text-danger">&#9313;</span>What is a CV example?</p>
+                <p>A resume is a brief summary. ... If you were writing your resume you would include only the work
+                    information that relates specifically to the job you're applying for, but for a Curriculum Vitae,
+                    you would also include all your teaching experience, lab and field work..</p>
+            </div>
+        </div>
+        <div class="d-flex mt-4">
+            <div class="ms-5">
+                <p><span style="font-size:555%;" class="text-success">&#9314;</span>Do you need a resume for your first
+                    job?</p>
+                <p>When writing your first resume with no work experience, it's appropriate to include casual jobs like
+                    babysitting, pet sitting, lawn mowing, and shoveling snow. All experience counts and the way you
+                    present yourself, your skills, and your assets to a hiring manager begins with a strong resume.</p>
+            </div>
+            <div>
+                <hr>
+                <img class="m-5" src="Images/job3.jpg" height="200" width="300">
+            </div>
+        </div>
+        <div class="d-flex mt-4">
+            <div>
+                <hr>
+                <img class="m-5" src="Images/job4.jpg" height="200" width="300">
+            </div>
+            <div class="ms-5">
+                <p><span style="font-size:555%;" class="text-primary">&#9315;</span>Why do you think you can do well in
+                    this job?</p>
+                <p>I believe I will do well in this job because I have the relevant skills and it is my field of
+                    interest. ... I have a confident that I can do well in the job because of self confidence, positive
+                    attitude. Previous success also brings self confidence for the future success.</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-lg btn-primary mt-3 me-5">Request Call Back</button>
+            <button class="btn btn-lg btn-secondary mt-3">FAQ's</button>
+        </div>
+    </div>
+    <div style="background-color: gray;" class="mt-5 pt-4">
+        <h3 class="text-center mb-5">Student Department Details</h3>
+        <div class="d-flex justify-content-between">
+            <div class="ms-5">
+                <h1 class="ms-5"><span class="fa fa-hourglass"></span></h1>
+                <p>Average Salary Offered</p>
+                <p class="fs-5">INR 7 L per annum</p>
+                <p>per annum</p>
+            </div>
+            <div>
+                <h1 class="ms-3"><span class="fas fa-sync"></span></h1>
+                <p>Duration</p>
+                <p class="fs-5">2</p>
+                <p>years</p>
+            </div>
+            <div>
+                <h1 class="ms-5"><span class="far fa-thumbs-up"></span></h1>
+                <p>Average Fees Incurred</p>
+                <p class="fs-5">INR 25,000 - 2 L</p>
+                <p>per annum</p>
+            </div>
+            <div class="me-5">
+                <h1 class="ms-5"><span class="fa fa-flag"></span></h1>
+                <p>Indian Institute of Technology, [IIT] Kanpur</p>
+                <p class="fs-5">49,035</p>
+                <p>Kanpur</p>
+            </div>
+        </div>
+        <p class="text-center pb-4">* job: A group of homogeneous tasks related by similarity of functions.</p>
+    </div>
+                 <!-- Services -->
+    <h2 class="text-center mt-5" id="service">Services</h2>
+    <div class="d-flex">
+        <div class="box border border-dark m-5 w-25">
+            <img class="ps-5" src="Images/s1.jpg" height="100" width="300">
+            <h5 class="ms-3 mt-4">Web Design!!</h5>
+            <p class="p-3 text-justify">Online ordering system helps to maintain a Better Business Relationship with your customers, which is a
+                key factor to run any successful business.</p>
+        </div>
+        <div class="box border border-dark m-5 w-25">
+            <img class="ps-5" src="Images/s2.jpg" height="100" width="300">
+            <h5 class="ms-3 mt-4">IT Services!!</h5>
+            <p class="p-3 text-justify">We are ideally located in Larbert meaning we can offer IT support to businesses throughout Scotland. We take the hassle and worry out of your IT system by providing preventative and proactive IT support.</p>
+        </div>
+        <div class="box border border-dark m-5 w-25">
+            <img  class="ps-5"src="Images/s3.png" height="100" width="300">
+            <h5 class="ms-3 mt-4">Web Marketing!!</h5>
+            <p class="p-3 text-justify">We are passionate about digital content creation, strategy and delivery. We deliver results by designing marketing strategies which improve our clients brand visibility.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="row bg-dark text-white">
+            <h5 class="text-center p-3">Naresh Technologies</h5>
+           <div class="col m-5">
+              <ul>
+                  <li><span class="fab fa-facebook"> Facebook</span></li>
+                  <li><span class="fab fa-google"> Google</span></li>
+                  <li><span class="fab fa-twitter"> Twitter</span></li>
+                  <li><span class="fab fa-youtube"> Youtube</span></li>
+              </ul>
+           </div>
+           <div class="col m-5">
+               <ul>
+                   <li><span class="fa fa-home"> Home</span></li>
+                   <li><span class="far fa-address-card"> About</span></li>
+                   <li><span class="fab fa-servicestack"> Service</span></li>
+                   <li><span class="fas fa-phone-alt"> Contact</span></li>
+               </ul>
+           </div>
+           <div class="col m-5">
+                <ul>
+                    <li>Name : Naresh Istitute</li>
+                    <li>Email : info@nareshit.com</li>
+                    <li>Contact : +91-xxxxxxxxxx</li>
+                    <li>Address : Sr nagar, Hyderabad, Telangana, India</li>
+                </ul>
+           </div>
+        </div>
+    </footer>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
